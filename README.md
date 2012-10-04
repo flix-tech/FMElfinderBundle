@@ -12,20 +12,22 @@ This instruction explain how to setup bundle on Symfony 2.1 RC
 
 ### Step 1: Installation
 
-Add FMElfinderBundle in your composer.json:
+Add FMElfinderBundle in your deps:
 
-```js
-{
-    "require": {
-        "helios-ag/fm-elfinder-bundle": "*"
-    }
-}
+```
+[FMElfinderBundle]
+    git=git@github.com:EricReiche/FMElfinderBundle.git
+    target=/bundles/FM/ElfinderBundle
+
+[FMElfinder]
+    git=git@github.com:oyejorge/elFinder.git
+    target=/studio-42/elfinder
 ```
 
-Now tell composer to download the bundle by running the command:
+Now download the bundles by running the command:
 
 ``` bash
-$ php composer.phar update helios-ag/fm-elfinder-bundle
+$ bin/vendors install
 ```
 
 ### Step 2: Enable the bundle
@@ -47,7 +49,7 @@ public function registerBundles()
 ### Step 3: Import FMElfinderBundle routing file
 
 ``` yaml
-# app/config/config.yml
+# app/config/routing.yml
 elfinder:
      resource: "@FMElfinderBundle/Resources/config/routing.yml"
 ```
@@ -66,12 +68,11 @@ security:
 
 ```
 ### Step 5: Configure assetic
-Under assetic section of your config.yml, add to bundles, FMElfinderBundle
+Under assetic section of your config.yml
 ``` yaml
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [FMElfinderBundle]
 ```
 
 ### Step 6: Install and dump assets
@@ -80,7 +81,6 @@ Install and dump assets using symfony built-in commands:
 
 ```sh
 app/console assets:install web
-app/console assetic:dump
 ```
 
 ### Basic configuration
@@ -91,7 +91,7 @@ fm_elfinder:
     path: uploads
     driver: LocalFileSystem
     locale: %locale%
-    editor: ckeditor
+    editor: simple
     showhidden: false
 
 path option - define root directory for the files inside web/ directory, default is "uploads". Make sure to set
