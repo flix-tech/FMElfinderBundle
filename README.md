@@ -20,7 +20,7 @@ Add FMElfinderBundle in your deps:
     target=/bundles/FM/ElfinderBundle
 
 [FMElfinder]
-    git=git@github.com:oyejorge/elFinder.git
+    git=git@github.com:EricReiche/elFinder.git
     target=/studio-42/elfinder
 ```
 
