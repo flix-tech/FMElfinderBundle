@@ -4,11 +4,11 @@ namespace FM\ElfinderBundle\Loader;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-error_reporting(0);
-include_once __DIR__.'/../../../../../studio-42/elfinder/php/elFinderConnector.class.php';
-include_once __DIR__.'/../../../../../studio-42/elfinder/php/elFinder.class.php';
-include_once __DIR__.'/../../../../../studio-42/elfinder/php/elFinderVolumeDriver.class.php';
-include_once __DIR__.'/../../../../../studio-42/elfinder/php/elFinderVolumeLocalFileSystem.class.php';
+error_reporting(E_ALL);
+include_once __DIR__.'/../../../../studio-42/elfinder/php/elFinderConnector.class.php';
+include_once __DIR__.'/../../../../studio-42/elfinder/php/elFinder.class.php';
+include_once __DIR__.'/../../../../studio-42/elfinder/php/elFinderVolumeDriver.class.php';
+include_once __DIR__.'/../../../../studio-42/elfinder/php/elFinderVolumeLocalFileSystem.class.php';
 
 class FMElfinderLoader
 {

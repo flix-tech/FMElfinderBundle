@@ -2,13 +2,13 @@
 <html>
 <head>
     <link rel="stylesheet" href="{{asset('bundles/fmelfinder/css/jquery/ui-themes/smoothness/jquery-ui-1.8.21.custom.css')}}" />
-    {% stylesheets output='ef-assets/css/main.css' filter='?yui_css,cssrewrite'
+    {% stylesheets output='ef-assets/css/main.css' filter='?cssrewrite'
         '%kernel.root_dir%/../vendor/studio-42/elfinder/css/*'
     %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 
-    {% javascripts output='ef-assets/js/main.js' filter='?yui_js'
+    {% javascripts
         '%kernel.root_dir%/../vendor/studio-42/elfinder/jquery/jquery-1.7.2.min.js'
         '%kernel.root_dir%/../vendor/studio-42/elfinder/jquery/jquery-ui-1.8.21.custom.min.js'
         '%kernel.root_dir%/../vendor/studio-42/elfinder/js/elFinder.js'
