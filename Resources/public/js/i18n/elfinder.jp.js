@@ -1,15 +1,13 @@
 /**
  * Japanese translation
- * @author Tomoaki Yoshida <info@yoshida-studio.jp>, Naoki Sawada <hypweb@gmail.com>
- * @version 2012-08-15
+ * @author Tomoaki Yoshida <info@yoshida-studio.jp>
+ * @version 2012-02-25
  */
 if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object') {
 	elFinder.prototype.i18.jp = {
 		translator : 'Tomoaki Yoshida &lt;info@yoshida-studio.jp&gt;',
 		language   : 'Japanese',
 		direction  : 'ltr',
-		dateFormat : 'Y/m/d h:i A', // 2012/04/11 05:27 PM
-		fancyDateFormat : '$1 h:i A', // will produce smth like: 今日 12:25 PM
 		messages   : {
 			
 			/********************************** errors **********************************/
@@ -70,16 +68,13 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'errArcType'           : 'サポート外のアーカイブ形式です',
 			'errNoArchive'         : 'アーカイブでないかサポートされていないアーカイブ形式です',
 			'errCmdNoSupport'      : 'サポートされていないコマンドです',
-			'errReplByChild'       : 'フォルダ "$1" に含まれてるアイテムを置き換えることはできません',
-			'errArcSymlinks'       : 'シンボリックリンクまたは許容されないファイル名を含むアーカイブはセキュリティ上、解凍できません', // edited 25.06.2012
+			'errReplByChild'       : 'ホルダ "$1" に含まれてるアイテムを置き換えることはできません',
+			'errArcSymlinks'       : 'シンボリックリンクを含むアーカイブはセキュリティ上、解凍できません',
 			'errArcMaxSize'        : 'アーカイブが許容されたサイズを超えています',
 			'errResize'            : '"$1"をリサイズできません',
 			'errUsupportType'      : 'このファイルタイプはサポートされません',
 			'errNotUTF8Content'    : 'ファイル "$1" には UTF-8 以外の文字が含まれているので編集できません',  // added 9.11.2011
-			'errNetMount'          : '"$1"をマウントできません', // added 17.04.2012
-			'errNetMountNoDriver'  : 'サポートされていないプロトコルです',     // added 17.04.2012
-			'errNetMountFailed'    : 'マウントに失敗しました',         // added 17.04.2012
-			'errNetMountHostReq'   : 'ホスト名は必須です', // added 18.04.2012
+			
 			/******************************* commands names ********************************/
 			'cmdarchive'   : 'アーカイブ作成',
 			'cmdback'      : '戻る',
@@ -108,7 +103,6 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'cmdview'      : 'ビュー',
 			'cmdresize'    : 'リサイズと回転',
 			'cmdsort'      : 'ソート',
-			'cmdnetmount'  : 'ネットワークボリュームをマウント', // added 18.04.2012
 			
 			/*********************************** buttons ***********************************/ 
 			'btnClose'  : '閉じる',
@@ -118,7 +112,7 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'btnCancel' : 'キャンセル',
 			'btnNo'     : 'いいえ',
 			'btnYes'    : 'はい',
-			'btnMount'  : 'マウント',  // added 18.04.2012
+			
 			/******************************** notifications ********************************/
 			'ntfopen'     : 'フォルダーを開く',
 			'ntffile'     : 'ファイルを開く',
@@ -138,8 +132,7 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'ntfsearch'   : 'ファイル検索',
 			'ntfresize'   : 'リサイズしています',
 			'ntfsmth'     : '何かしています >_<',
-      		'ntfloadimg'  : 'イメージを読み込んでいます',
-      		'ntfnetmount' : 'ネットワークボリュームをマウントしています', // added 18.04.2012
+			'ntfloadimg'  : 'Loading image',
 			
 			/************************************ dates **********************************/
 			'dateUnknown' : '不明',
@@ -159,11 +152,14 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'Dec'         : '12月',
 
 			/******************************** sort variants ********************************/
+			'sortnameDirsFirst' : '名前順 (フォルダ優先)', 
+			'sortkindDirsFirst' : '種類順 (フォルダ優先)', 
+			'sortsizeDirsFirst' : 'サイズ順 (フォルダ優先)', 
+			'sortdateDirsFirst' : '日付順 (フォルダ優先)', 
 			'sortname'          : '名前順', 
 			'sortkind'          : '種類順', 
 			'sortsize'          : 'サイズ順',
 			'sortdate'          : '日付順',
-			'sortFoldersFirst'  : 'フォルダ優先', // added 21.06.2012
 
 			/********************************** messages **********************************/
 			'confirmReq'      : '確認必須です',
@@ -205,7 +201,7 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'help'            : 'ヘルプ',
 			'webfm'           : 'ウェブファイルマネージャー',
 			'ver'             : 'バージョン',
-			'protocolver'     : 'プロトコルバージョン',
+			'protocol'        : 'プロトコルバージョン',
 			'homepage'        : 'プロジェクトホーム',
 			'docs'            : 'ドキュメンテーション',
 			'github'          : 'Github でフォーク',
@@ -236,13 +232,7 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'rotate-cw'       : '90度左回転',
 			'rotate-ccw'      : '90度右回転',
 			'degree'          : '度',
-			'netMountDialogTitle' : 'ネットワークボリュームのマウント', // added 18.04.2012
-			'protocol'            : 'プロトコル', // added 18.04.2012
-			'host'                : 'ホスト名', // added 18.04.2012
-			'port'                : 'ポート', // added 18.04.2012
-			'user'                : 'ユーザー名', // added 18.04.2012
-			'pass'                : 'パスワード', // added 18.04.2012
-
+			
 			/********************************** mimetypes **********************************/
 			'kindUnknown'     : '不明',
 			'kindFolder'      : 'フォルダー',

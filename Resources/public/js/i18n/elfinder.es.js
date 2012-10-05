@@ -181,7 +181,7 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'help'            : 'Ayuda',
 			'webfm'           : 'Administrador de archivos web',
 			'ver'             : 'Version',
-			'protocolver'     : 'versión del protocolo',
+			'protocol'        : 'versión del protocolo',
 			'homepage'        : 'Project home',
 			'docs'            : 'Documentación',
 			'github'          : 'Fork us on Github',

@@ -196,7 +196,7 @@ if (elFinder && elFinder.prototype && typeof(elFinder.prototype.i18) == 'object'
 			'help'            : 'Pomoc',
 			'webfm'           : 'Menedżer plików sieciowych',
 			'ver'             : 'Wersja',
-			'protocolver'     : 'wersja wydania',
+			'protocol'        : 'wersja wydania',
 			'homepage'        : 'Strona główna projektu',
 			'docs'            : 'Dokumentacja',
 			'github'          : 'Obserwuj rozwój projektu na Github',
